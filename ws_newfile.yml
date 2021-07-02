@@ -5,7 +5,7 @@
   tasks:
   - name: Create multiple files
     file: 
-      path: "/etc/Workshop"{{ item }}""
+      path: /etc/Workshop/"{{ item }}"
       state: touch
     with_items:
     - test01.txt
