@@ -1,10 +1,13 @@
 ---
+
 - hosts: all
-  become: yes
   tasks:
-  - name: Creating a file with content
-    copy:
-      dest: /etc/Workshop
-      content: |
-        line 01
-        line 02
+  - name: Create multiple files
+    file: 
+      path: /etc/workshop"{{ item }}"
+      state: touch
+    with_items:
+    - test01.txt
+    - test02.txt
+    - test03.txt
+    - test04.txt
