@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+  - name: Creating a file with content
+    copy:
+      dest: "/etc/workshop"
+      content: |
+        line 01
+        line 02
