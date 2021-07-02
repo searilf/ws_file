@@ -4,7 +4,7 @@
   tasks:
   - name: Creating a file with content
     copy:
-      dest: "/etc/workshop"
+      dest: "/etc/Workshop"
       content: |
         line 01
         line 02
